@@ -1,0 +1,1508 @@
+{
+  "package": "Tookan",
+  "tagline": "Tookan API Package",
+  "description": "Simple, Powerful & Effective way to manage your delivery process.",
+  "image": "http://logo.clearbit.com/tookanapp.com",
+  "keywords": [
+    "API"
+  ],
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Tookan-Package",
+  "accounts": {
+    "domain": "tookanapp.com",
+    "credentials": [
+      "apiKey"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "createPickupTask",
+      "description": "There are different types of tasks can be created inside Tookan depending on the workflow you have selected in your account for e.g. - pick & delivery task, appointment task etc.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "info": "Your can pass this key as your own transaction number which can be used to identify tasks in tookan",
+          "required": false
+        },
+        {
+          "name": "jobDescription",
+          "type": "String",
+          "info": "The description of the task to be done",
+          "required": false
+        },
+        {
+          "name": "jobPickupPhone",
+          "type": "String",
+          "info": "The contact number of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupName",
+          "type": "String",
+          "info": "The name of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupEmail",
+          "type": "String",
+          "info": "The email of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupAddress",
+          "type": "String",
+          "info": "The address from which the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupLatitude",
+          "type": "String",
+          "info": "This is the latitiude of the pickup location",
+          "required": false
+        },
+        {
+          "name": "jobPickupLongitude",
+          "type": "String",
+          "info": "This is the longitutude of the pickup location",
+          "required": false
+        },
+        {
+          "name": "jobPickupDatetime",
+          "type": "String",
+          "info": "This is time before which the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "trackingLink",
+          "type": "String",
+          "info": "If this value is `1` it will return a url in the response where the driver's movement can be tracked.if not no url will be returned",
+          "required": false
+        },
+        {
+          "name": "timezone",
+          "type": "String",
+          "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330, for CST: +360 (CDT:+300)",
+          "required": false
+        },
+        {
+          "name": "pickupCustomFieldTemplate",
+          "type": "String",
+          "info": "This is the custom fields template name that is pre-defined in your workflow page in the admin account",
+          "required": false
+        },
+        {
+          "name": "pickupMetadata",
+          "type": "JSON",
+          "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
+          "required": false
+        },
+        {
+          "name": "teamId",
+          "type": "String",
+          "info": "This is the Unique id of every team. You can get it from the dashBoard. More>teams>respective id of the team will displayed.",
+          "required": false
+        },
+        {
+          "name": "autoAssignment",
+          "type": "Boolean",
+          "info": "If this value is 1 The task will be auto assigned to the members of the specific team mentioned. or if this value is 0 it will be unassigned task created.",
+          "required": false
+        },
+        {
+          "name": "fleetId",
+          "type": "String",
+          "info": "This is unique agent id given to each agent, if given the task will be assigned to the respective agent. You can get it from dashboard Menu>More>agents.",
+          "required": false
+        },
+        {
+          "name": "pRefImages",
+          "type": "Array",
+          "info": "This is an array of strings containing links of images.",
+          "required": false
+        },
+        {
+          "name": "notify",
+          "type": "Number",
+          "info": "This is used to enable the notifications.",
+          "required": false
+        },
+        {
+          "name": "geofence",
+          "type": "Number",
+          "info": "This is used to enable the geofencing.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "This is a string containing comma separated tags as filters for agents in auto assignment.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "createDeliveryTask",
+      "description": "This API is used to create a Delivery Task.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "info": "Your can pass this key as your own transaction number which can be used to identify tasks in tookan",
+          "required": false
+        },
+        {
+          "name": "jobDescription",
+          "type": "String",
+          "info": "The description of the task to be done",
+          "required": false
+        },
+        {
+          "name": "jobPickupPhone",
+          "type": "String",
+          "info": "The contact number of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "customerEmail",
+          "type": "String",
+          "info": "This is email of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerUsername",
+          "type": "String",
+          "info": "This is the name of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerPhone",
+          "type": "String",
+          "info": "This is the contact number of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerAddress",
+          "type": "String",
+          "info": "This is the address of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "latitude",
+          "type": "String",
+          "info": "This is the latitiude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
+          "required": false
+        },
+        {
+          "name": "longitude",
+          "type": "String",
+          "info": "This is the latitiude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
+          "required": false
+        },
+        {
+          "name": "jobDeliveryDatetime",
+          "type": "String",
+          "info": "This is time before which the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "trackingLink",
+          "type": "Boolean",
+          "info": "If this value is `1` it will return a url in the respone where the driver's movement can be tracked.",
+          "required": false
+        },
+        {
+          "name": "timezone",
+          "type": "String",
+          "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330",
+          "required": false
+        },
+        {
+          "name": "metadata",
+          "type": "JSON",
+          "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
+          "required": false
+        },
+        {
+          "name": "teamId",
+          "type": "String",
+          "info": "This is the Unique id of every team. You can get it from the dashBoard. More>teams>respective id of the team will displayed.",
+          "required": false
+        },
+        {
+          "name": "autoAssignment",
+          "info": "If this value is `1`. The task will be auto assigned to the members of the specific team mentioned. or if this value is `0` it will be unassigned task created.",
+          "type": "String",
+          "required": false
+        },
+        {
+          "name": "fleetId",
+          "type": "String",
+          "info": "This is unique agent id given to each agent, if given the task will be assigned to the respective agent. You can get it from dashboard Menu>More>agents.",
+          "required": false
+        },
+        {
+          "name": "refImages",
+          "type": "Array",
+          "info": "This is an array of strings containing links of images",
+          "required": false
+        },
+        {
+          "name": "notify",
+          "type": "Number",
+          "info": "This is used to enable the notifications",
+          "required": false
+        },
+        {
+          "name": "geofence",
+          "type": "Number",
+          "info": "This is used to enable the geofencing",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "This is a string containing comma separated tags as filters for agents in auto assignment",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "createPickupAndDeliveryTask",
+      "description": "This api is used to create Pickup and delivery task.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "info": "Your can pass this key as your own transaction number which can be used to identify tasks in tookan",
+          "required": false
+        },
+        {
+          "name": "teamId",
+          "type": "Number",
+          "info": "This is the Unique id of every team. You can get it from the dashBoard. More>teams>respective id of the team will displayed",
+          "required": false
+        },
+        {
+          "name": "autoAssignment",
+          "type": "String",
+          "info": "If this value is 1. The task will be auto assigned to the members of the specific team mentioned. or if this value is 0 it will be unassigned task created.",
+          "required": false
+        },
+        {
+          "name": "jobDescription",
+          "type": "String",
+          "info": "The description of the task to be done",
+          "required": false
+        },
+        {
+          "name": "jobPickupPhone",
+          "type": "String",
+          "info": "The contact number of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupName",
+          "type": "String",
+          "info": "The name of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupEmail",
+          "type": "String",
+          "info": "The email of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupAddress",
+          "type": "String",
+          "info": "The address from which the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupLatitude",
+          "type": "String",
+          "info": "This is the latitiude of the pickup location",
+          "required": false
+        },
+        {
+          "name": "jobPickupLongitude",
+          "type": "String",
+          "info": "This is the longitutude of the pickup location",
+          "required": false
+        },
+        {
+          "name": "jobPickupDatetime",
+          "type": "String",
+          "info": "This is time before which the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "pickupMetadata",
+          "type": "JSON",
+          "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
+          "required": false
+        },
+        {
+          "name": "customerEmail",
+          "type": "String",
+          "info": "This is email of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerUsername",
+          "type": "String",
+          "info": "This is the name of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerPhone",
+          "type": "String",
+          "info": "This is the contact number of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerAddress",
+          "type": "String",
+          "info": "This is the address of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "latitude",
+          "type": "String",
+          "info": "This is the latitiude of the delivery location",
+          "required": false
+        },
+        {
+          "name": "longitude",
+          "type": "String",
+          "info": "This is the longitude of the delivery location",
+          "required": false
+        },
+        {
+          "name": "jobDeliveryDatetime",
+          "type": "String",
+          "info": "This is time before which the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customFieldTemplate",
+          "type": "String",
+          "info": "This is the custom fields template name that is pre-defined in your workflow page in the admin account",
+          "required": false
+        },
+        {
+          "name": "metadata",
+          "type": "JSON",
+          "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
+          "required": false
+        },
+        {
+          "name": "timezone",
+          "type": "Integer",
+          "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330",
+          "required": false
+        },
+        {
+          "name": "trackingLink",
+          "type": "String",
+          "info": "If this value is 1 it will return a url in the respone where the driver's movement can be tracked.",
+          "required": false
+        },
+        {
+          "name": "fleetId",
+          "type": "String",
+          "info": "This is unique agent id given to each agent, if given the task will be assigned to the respective agent. You can get it from dashboard Menu>More>agents.",
+          "required": false
+        },
+        {
+          "name": "pRefImages",
+          "type": "Array",
+          "info": "(Pickup) This is an array of strings containing links of images.",
+          "required": false
+        },
+        {
+          "name": "refImages",
+          "type": "Array",
+          "info": "(Delivery) This is an array of strings containing links of images.",
+          "required": false
+        },
+        {
+          "name": "notify",
+          "type": "Number",
+          "info": "This is used to enable the notifications",
+          "required": false
+        },
+        {
+          "name": "geofence",
+          "type": "Number",
+          "info": "This is used to enable the geofencing.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "This is a string containing comma separated tags as filters for agents in auto assignment.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "createAppointmentTask",
+      "description": "This api is used to create an appointment task. ",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "info": "Your can pass this key as your own transaction number which can be used to identify tasks in tookan",
+          "required": false
+        },
+        {
+          "name": "teamId",
+          "type": "String",
+          "info": "This is the Unique id of every team. You can get it from the dashBoard. More>teams>respective id of the team will displayed.",
+          "required": false
+        },
+        {
+          "name": "autoAssignment",
+          "type": "String",
+          "info": "If this value is 1 the task will be auto assigned to the members of the specific team mentioned. or if this value is 0 it will be unassigned task created.",
+          "required": false
+        },
+        {
+          "name": "jobDescription",
+          "type": "String",
+          "info": "The description of the task to be done",
+          "required": false
+        },
+        {
+          "name": "jobPickupPhone",
+          "type": "String",
+          "info": "The contact number of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupName",
+          "type": "String",
+          "info": "The name of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupEmail",
+          "type": "String",
+          "info": "The email of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupAddress",
+          "type": "String",
+          "info": "The address from which the pickup should be collected.",
+          "required": false
+        },
+        {
+          "name": "jobPickupLatitude",
+          "type": "String",
+          "info": "This is the latitiude of the pickup location",
+          "required": false
+        },
+        {
+          "name": "jobPickupLongitude",
+          "type": "String",
+          "info": "This is the longitutude of the pickup location",
+          "required": false
+        },
+        {
+          "name": "jobPickupDatetime",
+          "type": "String",
+          "info": "This is time before which the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "pickupCustomFieldTemplate",
+          "type": "String",
+          "info": "This is the custom fields template name that is pre-defined in your workflow page in the admin account",
+          "required": false
+        },
+        {
+          "name": "pickupMetadata",
+          "type": "String",
+          "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
+          "required": false
+        },
+        {
+          "name": "customerEmail",
+          "type": "String",
+          "info": "This is email of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerUsername",
+          "type": "String",
+          "info": "This is the name of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerPhone",
+          "type": "String",
+          "info": "This is the contact number of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerAddress",
+          "type": "String",
+          "info": "This is the address of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "latitude",
+          "type": "String",
+          "info": "This is the latitiude of the delivery location",
+          "required": false
+        },
+        {
+          "name": "longitude",
+          "type": "String",
+          "info": "This is the longitude of the delivery location",
+          "required": false
+        },
+        {
+          "name": "jobDeliveryDatetime",
+          "type": "String",
+          "info": "This is time before which the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customFieldTemplate",
+          "type": "String",
+          "info": "This is the custom fields template name that is pre-defined in your workflow page in the admin account.",
+          "required": false
+        },
+        {
+          "name": "metadata",
+          "type": "JSON",
+          "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
+          "required": false
+        },
+        {
+          "name": "timezone",
+          "type": "Number",
+          "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330",
+          "required": false
+        },
+        {
+          "name": "trackingLink",
+          "type": "String",
+          "info": "If this value is `1` it will return a url in the respone where the driver's movement can be tracked.",
+          "required": false
+        },
+        {
+          "name": "fleetId",
+          "type": "String",
+          "info": "This is unique agent id given to each agent, if given the task will be assigned to the respective agent. You can get it from dashboard Menu>More>agents.",
+          "required": false
+        },
+        {
+          "name": "pRefImages",
+          "type": "Array",
+          "info": "(Pickup) This is an array of strings containing links of images.",
+          "required": false
+        },
+        {
+          "name": "refImages",
+          "type": "Array",
+          "info": "(Delivery) This is an array of strings containing links of images.",
+          "required": false
+        },
+        {
+          "name": "notify",
+          "type": "String",
+          "info": "This is used to enable the notifications.",
+          "required": false
+        },
+        {
+          "name": "geofence",
+          "type": "String",
+          "info": "This is used to enable the geofencing.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "This is a string containing comma separated tags as filters for agents in auto assignment.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "updateTask",
+      "description": "This api used to edit a task that has already been added.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "jobId",
+          "type": "String",
+          "info": "This is the unique id given to every job which is returned while creating a task",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "info": "Your can pass this key as your own transaction number which can be used to identify tasks in tookan",
+          "required": false
+        },
+        {
+          "name": "hasPickup",
+          "type": "String",
+          "info": "Set `0` for delivery task or `1` for pickup task.",
+          "required": false
+        },
+        {
+          "name": "hasDelivery",
+          "type": "String",
+          "info": "Set `1` for delivery task or `0` for pickup task.",
+          "required": false
+        },
+        {
+          "name": "layoutType",
+          "type": "String",
+          "info": "For an appointment task this value is fixed to `1` else set to `0`.",
+          "required": false
+        },
+        {
+          "name": "jobDescription",
+          "type": "String",
+          "info": "The description of the task to be done",
+          "required": false
+        },
+        {
+          "name": "jobPickupPhone",
+          "type": "String",
+          "info": "The contact number of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupName",
+          "type": "String",
+          "info": "The name of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupEmail",
+          "type": "String",
+          "info": "The email of the person from whom the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupAddress",
+          "type": "String",
+          "info": "The address from which the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "jobPickupLatitude",
+          "type": "String",
+          "info": "This is the latitiude of the pickup location",
+          "required": false
+        },
+        {
+          "name": "jobPickupLongitude",
+          "type": "String",
+          "info": "This is the longitutude of the pickup location",
+          "required": false
+        },
+        {
+          "name": "jobPickupDatetime",
+          "type": "String",
+          "info": "This is time before which the pickup should be collected",
+          "required": false
+        },
+        {
+          "name": "trackingLink",
+          "type": "String",
+          "info": "If this value is `1` it will return a url in the response where the driver's movement can be tracked.if not no url will be returned",
+          "required": false
+        },
+        {
+          "name": "timezone",
+          "type": "String",
+          "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330, for CST: +360 (CDT:+300)",
+          "required": false
+        },
+        {
+          "name": "pickupCustomFieldTemplate",
+          "type": "String",
+          "info": "This is the custom fields template name that is pre-defined in your workflow page in the admin account",
+          "required": false
+        },
+        {
+          "name": "pickupMetadata",
+          "type": "JSON",
+          "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
+          "required": false
+        },
+        {
+          "name": "teamId",
+          "type": "String",
+          "info": "This is the Unique id of every team. You can get it from the dashBoard. More>teams>respective id of the team will displayed.",
+          "required": false
+        },
+        {
+          "name": "autoAssignment",
+          "type": "Boolean",
+          "info": "If this value is 1 The task will be auto assigned to the members of the specific team mentioned. or if this value is 0 it will be unassigned task created.",
+          "required": false
+        },
+        {
+          "name": "fleetId",
+          "type": "String",
+          "info": "This is unique agent id given to each agent, if given the task will be assigned to the respective agent. You can get it from dashboard Menu>More>agents.",
+          "required": false
+        },
+        {
+          "name": "pRefImages",
+          "type": "Array",
+          "info": "This is an array of strings containing links of images.",
+          "required": false
+        },
+        {
+          "name": "notify",
+          "type": "Number",
+          "info": "This is used to enable the notifications.",
+          "required": false
+        },
+        {
+          "name": "geofence",
+          "type": "Number",
+          "info": "This is used to enable the geofencing.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "This is a string containing comma separated tags as filters for agents in auto assignment.",
+          "required": false
+        },
+        {
+          "name": "customerEmail",
+          "type": "String",
+          "info": "This is email of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerUsername",
+          "type": "String",
+          "info": "This is the name of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerPhone",
+          "type": "String",
+          "info": "This is the contact number of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "customerAddress",
+          "type": "String",
+          "info": "This is the address of the customer to whom the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "latitude",
+          "type": "String",
+          "info": "This is the latitiude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
+          "required": false
+        },
+        {
+          "name": "longitude",
+          "type": "String",
+          "info": "This is the latitiude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
+          "required": false
+        },
+        {
+          "name": "jobDeliveryDatetime",
+          "type": "String",
+          "info": "This is time before which the product should be delivered",
+          "required": false
+        },
+        {
+          "name": "metadata",
+          "type": "JSON",
+          "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
+          "required": false
+        },
+        {
+          "name": "refImages",
+          "type": "Array",
+          "info": "This is an array of strings containing links of images",
+          "required": false
+        },
+        {
+          "name": "customFieldTemplate",
+          "type": "String",
+          "info": "This is the custom fields template name that is pre-defined in your workflow page in the admin account",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "getTask",
+      "description": "This api is used to get the details of the task. ",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "jobId",
+          "type": "Number",
+          "info": "You can get it from task details.",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "Number",
+          "info": "You can get it from account details page in Tookan dashboard.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "getTaskFromOrderID",
+      "description": "This api is used to get the details of the task.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "String",
+          "info": "This will be set by you.",
+          "required": true
+        },
+        {
+          "name": "userId",
+          "type": "String",
+          "info": "You can get it from account details page in Tookan dashboard.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "deleteTask",
+      "description": "This API is used to Delete a task which is not necessary.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "jobId",
+          "type": "String",
+          "info": "You can get it from task details.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "updateTaskStatus",
+      "description": "This API is used to force update the status of a task.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "jobId",
+          "type": "String",
+          "info": "Single or comma separated values. You can get it from task details.",
+          "required": true
+        },
+        {
+          "name": "jobStatus",
+          "type": "Number",
+          "info": "Refer status codes section above for various statuses available.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "assignTask",
+      "description": "This API is used to assign/reassign a unassigned/assigned task or an assigned task to Agent.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "jobId",
+          "type": "String",
+          "info": "You can get it from task details",
+          "required": true
+        },
+        {
+          "name": "fleetId",
+          "type": "String",
+          "info": "You can get it from your tookan account or you can use 'Get All Agents' API for retrieving list from your account.",
+          "required": true
+        },
+        {
+          "name": "teamId",
+          "type": "String",
+          "info": "You can get it from your tookan account in teams section.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "getAllTasks",
+      "description": "This API is used to get all the tasks as per the get all the tasks data as per the filters",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "jobStatus",
+          "type": "Number",
+          "info": "Filter the list of tasks via their status",
+          "required": false
+        },
+        {
+          "name": "jobType",
+          "type": "Number",
+          "info": "Filter via Job Type - 0 for Pick Up, 1 for Delivery, 2 for Appointment and 3 for FOS",
+          "required": false
+        },
+        {
+          "name": "startDate",
+          "type": "Number",
+          "info": "Start Date for the date range",
+          "required": false
+        },
+        {
+          "name": "endDate",
+          "type": "Number",
+          "info": "End Date for the date range",
+          "required": false
+        },
+        {
+          "name": "customFields",
+          "type": "Number",
+          "info": "You can pass this flag as 1, if you want the custom fields data to be included in the response. default is 0",
+          "required": false
+        },
+        {
+          "name": "isPagination",
+          "type": "Number",
+          "info": "You can set this as 1 to enable pagination",
+          "required": false
+        },
+        {
+          "name": "requestedPage",
+          "type": "Number",
+          "info": "Current(Which) page according to the page number of tasks in the filter",
+          "required": false
+        },
+        {
+          "name": "customerUsername",
+          "type": "String",
+          "info": "Filter the list based on the customer name.",
+          "required": false
+        },
+        {
+          "name": "customerPhone",
+          "type": "String",
+          "info": "Filter the list based on the customer phone number.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "getAgents",
+      "description": "This API is used to get all the Agents/drivers/fleets information with respect to a location. The response array contains a status key for each of the fleet, which shows the current status of the fleet - 0 for available, 1 for offline and 2 for busy, taking into account the location, connectivity, ON-Duty/OFF-Duty status and if they are presently working a task.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "teamId",
+          "type": "String",
+          "info": "",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "You can pass the tags, comma separated, if you want to filter the list of agents via tags.",
+          "required": false
+        },
+        {
+          "name": "fleetId",
+          "type": "String",
+          "info": "You can pass on the `fleetId` to get the data of a single fleet.",
+          "required": false
+        },
+        {
+          "name": "latitude",
+          "type": "String",
+          "info": "You can pass lat long values to get the distance between agent location and this location pointed by the lat long values.",
+          "required": false
+        },
+        {
+          "name": "longitude",
+          "type": "String",
+          "info": "Both lat long values are required if you want distance measurement and/or enable geo-fence filtering of the agents.",
+          "required": false
+        },
+        {
+          "name": "geofence",
+          "type": "String",
+          "info": "This is used to enable the geofencing filter w.r.t to the lat long values",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "addAgent",
+      "description": "This API is used to register a new Agent in your account.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "info": "Email of your agent",
+          "required": true
+        },
+        {
+          "name": "phone",
+          "type": "String",
+          "info": "Add the phone number of the agent. He will get a notification with the links and credentials to download the app",
+          "required": true
+        },
+        {
+          "name": "transportType",
+          "type": "String",
+          "info": "Send 1 for Car, 2 for Motor Cycle, 3 for Bicycle, 4 for Scooter, 5 for Foot, 6 for Truck",
+          "required": true
+        },
+        {
+          "name": "transportDesc",
+          "type": "String",
+          "info": "Transport description.",
+          "required": true
+        },
+        {
+          "name": "license",
+          "type": "String",
+          "info": "License",
+          "required": true
+        },
+        {
+          "name": "color",
+          "type": "String",
+          "info": "Color",
+          "required": true
+        },
+        {
+          "name": "timezone",
+          "type": "String",
+          "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330, for CST: +360 (CDT:+300)",
+          "required": true
+        },
+        {
+          "name": "teamId",
+          "type": "String",
+          "info": "You need to pass a team of which the agent will be a part of. Team Ids are visible on the All teams page",
+          "required": true
+        },
+        {
+          "name": "password",
+          "type": "String",
+          "info": "You can set the password yourself, or leave it empty, in which case the system will auto-generate the password",
+          "required": true
+        },
+        {
+          "name": "username",
+          "type": "String",
+          "info": "Unique username, which the agent will use to login to the Tookan Agent App",
+          "required": true
+        },
+        {
+          "name": "firstName",
+          "type": "String",
+          "info": "This is the First name of the manager to be added.",
+          "required": false
+        },
+        {
+          "name": "last_name",
+          "type": "String",
+          "info": "This is the Last name of the manager to be added.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "createTeam",
+      "description": "This API is used to create a team",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "teamName",
+          "type": "String",
+          "info": "",
+          "required": true
+        },
+        {
+          "name": "batteryUsage",
+          "type": "String",
+          "info": "This is parameter decides the battery usage and accuracy level of agent's mobile.If '0' it is low,if '1' it is Medium, '2' It is High.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "This is tags that you can mention for any team.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "getTeam",
+      "description": "This API is used to get the all the team details along with their agents' data",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "createManager",
+      "description": "This API is used to Create a Manager.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "info": "This is email of the manager to be added which is used while Login.",
+          "required": false
+        },
+        {
+          "name": "password",
+          "type": "String",
+          "info": "This is the password for the manager account to login.",
+          "required": false
+        },
+        {
+          "name": "firstName",
+          "type": "String",
+          "info": "This is the First name of the manager to be added.",
+          "required": false
+        },
+        {
+          "name": "last_name",
+          "type": "String",
+          "info": "This is the Last name of the manager to be added.",
+          "required": false
+        },
+        {
+          "name": "phone",
+          "type": "String",
+          "info": "This is the phone number of the manager to be added.",
+          "required": false
+        },
+        {
+          "name": "timezone",
+          "type": "String",
+          "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330, for CST: +360 (CDT:+300)",
+          "required": false
+        },
+        {
+          "name": "taskAccess",
+          "type": "String",
+          "info": "This is to give access for the unasigned tasks. Set this to '1' to give access and '0' not to give the access",
+          "required": false
+        },
+        {
+          "name": "addDriverAccess",
+          "type": "String",
+          "info": "This is to give access for the manager to create Agents. Set this to '1' to give access and '0' not to give the access",
+          "required": false
+        },
+        {
+          "name": "dispatcherTeams",
+          "type": "String",
+          "info": "Pass the team_ids in this parameter with comma seperated values to which the manager can access.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    },
+    {
+      "name": "getCustomer",
+      "description": "This API is used to get the all the Customer details.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "String",
+          "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
+          "required": true
+        },
+        {
+          "name": "customerUsername",
+          "type": "String",
+          "info": "Filter the list based on the customer name",
+          "required": false
+        },
+        {
+          "name": "customerPhone",
+          "type": "String",
+          "info": "Filter the list based on the customer phone number",
+          "required": false
+        },
+        {
+          "name": "isPagination",
+          "type": "String",
+          "info": "You can set this as 1 to enable pagination",
+          "required": false
+        },
+        {
+          "name": "requestedPage",
+          "type": "String",
+          "info": "Current(Which) page according to the page number of tasks in the filter",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "success",
+          "info": "Success"
+        },
+        {
+          "name": "error",
+          "info": "Error"
+        }
+      ]
+    }
+  ]
+}

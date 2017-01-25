@@ -1,0 +1,327 @@
+{
+    "createPickupTask": {
+        "url": "https://api.tookanapp.com/v2/create_task",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|orderId": "order_id",
+            "String|jobDescription": "job_description",
+            "String|jobPickupPhone": "job_pickup_phone",
+            "String|jobPickupName": "job_pickup_name",
+            "String|jobPickupEmail": "job_pickup_email",
+            "String|jobPickupAddress": "job_pickup_address",
+            "String|jobPickupLatitude": "job_pickup_latitude",
+            "String|jobPickupLongitude": "job_pickup_longitude",
+            "String|jobPickupDatetime": "job_pickup_datetime",
+            "String|trackingLink": "tracking_link",
+            "String|timezone": "timezone",
+            "String|pickupCustomFieldTemplate": "pickup_custom_field_template",
+            "JSON|pickupMetadata": "pickup_meta_data",
+            "String|teamId": "team_id",
+            "Boolean|autoAssignment": "auto_assignment",
+            "String|fleetId": "fleet_id",
+            "Array|pRefImages": "p_ref_images",
+            "Number|notify": "notify",
+            "Number|geofence": "geofence",
+            "String|tags": "tags"
+        },
+        "values": {
+            "has_pickup": 1,
+            "has_delivery": 0,
+            "layout_type": 0
+        }
+    },
+    "createDeliveryTask": {
+        "url": "https://api.tookanapp.com/v2/create_task",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|orderId": "order_id",
+            "String|jobDescription": "job_description",
+            "String|jobPickupPhone": "job_pickup_phone",
+            "String|customerEmail": "customer_email",
+            "String|customerUsername": "customer_username",
+            "String|customerPhone": "customer_phone",
+            "String|customerAddress": "customer_address",
+            "String|latitude": "latitude",
+            "String|longitude": "longitude",
+            "String|jobDeliveryDatetime": "job_delivery_datetime",
+            "Boolean|trackingLink": "tracking_link",
+            "String|timezone": "timezone",
+            "JSON|metadata": "meta_data",
+            "String|teamId": "team_id",
+            "String|autoAssignment": "auto_assignment",
+            "String|fleetId": "fleet_id",
+            "Array|refImages": "ref_images",
+            "Number|notify": "notify",
+            "Number|geofence": "geofence",
+            "String|tags": "tags"
+        },
+        "values": {
+            "has_pickup": 0,
+            "has_delivery": 1,
+            "layout_type": 0
+        }
+    },
+    "createPickupAndDeliveryTask": {
+        "url": "https://api.tookanapp.com/v2/create_task",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|orderId": "order_id",
+            "Number|teamId": "team_id",
+            "String|autoAssignment": "auto_assignment",
+            "String|jobDescription": "job_description",
+            "String|jobPickupPhone": "job_pickup_phone",
+            "String|jobPickupName": "job_pickup_name",
+            "String|jobPickupEmail": "job_pickup_email",
+            "String|jobPickupAddress": "job_pickup_address",
+            "String|jobPickupLatitude": "job_pickup_latitude",
+            "String|jobPickupLongitude": "job_pickup_longitude",
+            "String|jobPickupDatetime": "job_pickup_datetime",
+            "JSON|pickupMetadata": "pickup_meta_data",
+            "String|customerEmail": "customer_email",
+            "String|customerUsername": "customer_username",
+            "String|customerPhone": "customer_phone",
+            "String|customerAddress": "customer_address",
+            "String|latitude": "latitude",
+            "String|longitude": "longitude",
+            "String|jobDeliveryDatetime": "job_delivery_datetime",
+            "String|customFieldTemplate": "custom_field_template",
+            "JSON|metadata": "meta_data",
+            "Integer|timezone": "timezone",
+            "String|trackingLink": "tracking_link",
+            "String|fleetId": "fleet_id",
+            "Array|pRefImages": "p_ref_images",
+            "Array|refImages": "ref_images",
+            "Number|notify": "notify",
+            "Number|geofence": "geofence",
+            "String|tags": "tags"
+        },
+        "values": {
+            "has_pickup": 1,
+            "has_delivery": 1,
+            "layout_type": 0
+        }
+    },
+    "createAppointmentTask": {
+        "url": "https://api.tookanapp.com/v2/create_task",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|orderId": "order_id",
+            "String|teamId": "team_id",
+            "String|autoAssignment": "auto_assignment",
+            "String|jobDescription": "job_description",
+            "String|jobPickupPhone": "job_pickup_phone",
+            "String|jobPickupName": "job_pickup_name",
+            "String|jobPickupEmail": "job_pickup_email",
+            "String|jobPickupAddress": "job_pickup_address",
+            "String|jobPickupLatitude": "job_pickup_latitude",
+            "String|jobPickupLongitude": "job_pickup_longitude",
+            "String|jobPickupDatetime": "job_pickup_datetime",
+            "String|pickupCustomFieldTemplate": "pickup_custom_field_template",
+            "String|pickupMetadata": "pickup_meta_data",
+            "String|customerEmail": "customer_email",
+            "String|customerUsername": "customer_username",
+            "String|customerPhone": "customer_phone",
+            "String|customerAddress": "customer_address",
+            "String|latitude": "latitude",
+            "String|longitude": "longitude",
+            "String|jobDeliveryDatetime": "job_delivery_datetime",
+            "String|customFieldTemplate": "custom_field_template",
+            "JSON|metadata": "meta_data",
+            "Number|timezone": "timezone",
+            "String|trackingLink": "tracking_link",
+            "String|fleetId": "fleet_id",
+            "Array|pRefImages": "p_ref_images",
+            "Array|refImages": "ref_images",
+            "String|notify": "notify",
+            "String|geofence": "geofence",
+            "String|tags": "tags"
+        },
+        "values": {
+            "has_pickup": 0,
+            "has_delivery": 0,
+            "layout_type": 1
+        }
+    },
+    "updateTask": {
+        "url": "https://api.tookanapp.com/v2/edit_task",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|jobId": "$job_id",
+            "String|orderId": "order_id",
+            "String|hasPickup": "has_pickup",
+            "String|hasDelivery": "has_delivery",
+            "String|layoutType": "layout_type",
+            "String|jobDescription": "job_description",
+            "String|jobPickupPhone": "job_pickup_phone",
+            "String|jobPickupName": "job_pickup_name",
+            "String|jobPickupEmail": "job_pickup_email",
+            "String|jobPickupAddress": "job_pickup_address",
+            "String|jobPickupLatitude": "job_pickup_latitude",
+            "String|jobPickupLongitude": "job_pickup_longitude",
+            "String|jobPickupDatetime": "job_pickup_datetime",
+            "String|trackingLink": "tracking_link",
+            "String|timezone": "timezone",
+            "String|pickupCustomFieldTemplate": "pickup_custom_field_template",
+            "JSON|pickupMetadata": "pickup_meta_data",
+            "String|teamId": "team_id",
+            "Boolean|autoAssignment": "auto_assignment",
+            "String|fleetId": "fleet_id",
+            "Array|pRefImages": "p_ref_images",
+            "Number|notify": "notify",
+            "Number|geofence": "geofence",
+            "String|tags": "tags",
+            "String|customerEmail": "customer_email",
+            "String|customerUsername": "customer_username",
+            "String|customerPhone": "customer_phone",
+            "String|customerAddress": "customer_address",
+            "String|latitude": "latitude",
+            "String|longitude": "longitude",
+            "String|jobDeliveryDatetime": "job_delivery_datetime",
+            "JSON|metadata": "meta_data",
+            "Array|refImages": "ref_images",
+            "String|customFieldTemplate": "custom_field_template"
+        }
+    },
+    "getTask": {
+        "url": "https://api.tookanapp.com/v2/get_task_details",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "Number|jobId": "$job_id",
+            "Number|userId": "$user_id"
+        }
+    },
+    "getTaskFromOrderID": {
+        "url": "https://api.tookanapp.com/v2/get_task_details_by_order_id",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|orderId": "$order_id",
+            "String|userId": "$user_id"
+        }
+    },
+    "deleteTask": {
+        "url": "https://api.tookanapp.com/v2/delete_task",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|jobId": "$job_id"
+        }
+    },
+    "updateTaskStatus": {
+        "url": "https://api.tookanapp.com/v2/update_task_status",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|jobId": "$job_id",
+            "Number|jobStatus": "$job_status"
+        }
+    },
+    "assignTask": {
+        "url": "https://api.tookanapp.com/v2/assign_task",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|jobId": "$job_id",
+            "String|fleetId": "$fleet_id",
+            "String|teamId": "$team_id"
+        }
+    },
+    "getAllTasks": {
+        "url": "https://api.tookanapp.com/v2/get_all_tasks",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "Number|jobStatus": "job_status",
+            "Number|jobType": "job_type",
+            "Number|startDate": "start_date",
+            "Number|endDate": "end_date",
+            "Number|customFields": "custom_fields",
+            "Number|isPagination": "is_pagination",
+            "Number|requestedPage": "requested_page",
+            "String|customerUsername": "Customer_username",
+            "String|customerPhone": "Customer_phone"
+        }
+    },
+    "getAgents": {
+        "url": "https://api.tookanapp.com/v2/get_available_agents",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|teamId": "team_id",
+            "String|tags": "tags",
+            "String|fleetId": "fleet_id",
+            "String|latitude": "latitude",
+            "String|longitude": "longitude",
+            "String|geofence": "geofence"
+        }
+    },
+    "addAgent": {
+        "url": "https://api.tookanapp.com/v2/add_agent",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|email": "$email",
+            "String|phone": "$phone",
+            "String|transportType": "$transport_type",
+            "String|transportDesc": "$transport_desc",
+            "String|license": "$license",
+            "String|color": "$color",
+            "String|timezone": "$timezone",
+            "String|teamId": "$team_id",
+            "String|password": "$password",
+            "String|username": "$username",
+            "String|firstName": "first_name",
+            "String|last_name": "lastName"
+        }
+    },
+    "createTeam": {
+        "url": "https://api.tookanapp.com/v2/v2/create_team",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|teamName": "$team_name",
+            "String|batteryUsage": "battery_usage",
+            "String|tags": "tags"
+        }
+    },
+    "getTeam": {
+        "url": "https://api.tookanapp.com/v2/view_teams",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key"
+        }
+    },
+    "createManager": {
+        "url": "https://api.tookanapp.com/v2/v2/add_manager",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|email": "email",
+            "String|password": "password",
+            "String|firstName": "first_name",
+            "String|last_name": "lastName",
+            "String|phone": "phone",
+            "String|timezone": "timezone",
+            "String|taskAccess": "task_access",
+            "String|addDriverAccess": "add_driver_access",
+            "String|dispatcherTeams": "dispatcher_teams"
+        }
+    },
+    "getCustomer": {
+        "url": "https://api.tookanapp.com/v2/v2/get_all_customers",
+        "method": "POST",
+        "args": {
+            "String|apiKey": "$api_key",
+            "String|customerUsername": "Customer_username",
+            "String|customerPhone": "Customer_phone",
+            "String|isPagination": "is_pagination",
+            "String|requestedPage": "requested_page"
+        }
+    }
+}
