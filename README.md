@@ -36,7 +36,7 @@ There are different types of tasks can be created inside Tookan depending on the
 | tags                     | String | This is a string containing comma separated tags as filters for agents in auto assignment.
 
 #### `pickupMetadata` field example: 
-```json
+````json
 "pickupMetadata": [
   {
 	"label": "Price",
@@ -49,7 +49,7 @@ There are different types of tasks can be created inside Tookan depending on the
 ]
 ```
 #### `refImages` field example: 
-``json
+````json
 "pRefImages": [
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png",
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png"
@@ -84,7 +84,7 @@ This API is used to create a Delivery Task.
 | tags               | String | This is a string containing comma separated tags as filters for agents in auto assignment
 
 #### `pickupMetadata` field example: 
-```json
+````json
 "metadata": [
   {
 	"label": "Price",
@@ -98,7 +98,7 @@ This API is used to create a Delivery Task.
 ```
 
 #### `refImages` field example: 
-``json
+```json
 "refImages": [
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png",
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png"
@@ -142,7 +142,7 @@ This api is used to create Pickup and delivery task.
 | tags               | String | This is a string containing comma separated tags as filters for agents in auto assignment.
 
 #### `pickupMetadata`, `metadata` fields example: 
-```json
+````json
 [
   {
 	"label": "Price",
@@ -156,7 +156,7 @@ This api is used to create Pickup and delivery task.
 ```
 
 #### `refImages`, `pRefImages` fields example: 
-``json
+```json
 [
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png",
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png"
@@ -201,7 +201,7 @@ This api is used to create an appointment task.
 | tags                     | String| This is a string containing comma separated tags as filters for agents in auto assignment.
 
 #### `metadata` field example: 
-```json
+````json
 [
   {
 	"label": "Price",
@@ -215,7 +215,7 @@ This api is used to create an appointment task.
 ```
 
 #### `refImages`, `pRefImages` fields example: 
-``json
+```json
 [
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png",
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png"
@@ -263,7 +263,7 @@ This api used to edit a task that has already been added.
 | customFieldTemplate      | String | This is the custom fields template name that is pre-defined in your workflow page in the admin account
 
 #### `pickupMetadata`, `metadata` fields example: 
-```json
+````json
 [
   {
 	"label": "Price",
@@ -277,7 +277,7 @@ This api used to edit a task that has already been added.
 ```
 
 #### `refImages`, `pRefImages` fields example: 
-``json
+```json
 [
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png",
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png"
