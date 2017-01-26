@@ -43,6 +43,8 @@ for(let func in control) {
             contextWrites: {}
         };
 
+        //req.body.args = lib.clearArgs(req.body.args);
+
         try {
             if(values) opts = lib.parseValues(values);
 
