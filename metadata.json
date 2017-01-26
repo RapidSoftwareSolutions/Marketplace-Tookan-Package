@@ -436,7 +436,7 @@
         },
         {
           "name": "timezone",
-          "type": "Integer",
+          "type": "Number",
           "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330",
           "required": true
         },
