@@ -351,7 +351,7 @@ This API is used to get all the Agents/drivers/fleets information with respect t
 | Field     | Type  | Description
 |-----------|-------|----------
 | apiKey    | String| You can get a key from settings(Login>Menu>More>API Key) in your tookan account.
-| teamId    | String| 
+| teamId    | String| Team ID
 | tags      | String| You can pass the tags, comma separated, if you want to filter the list of agents via tags.
 | fleetId   | String| You can pass on the `fleetId` to get the data of a single fleet.
 | latitude  | String| You can pass lat long values to get the distance between agent location and this location pointed by the lat long values.
@@ -383,7 +383,7 @@ This API is used to create a team
 | Field       | Type  | Description
 |-------------|-------|----------
 | apiKey      | String| You can get a key from settings(Login>Menu>More>API Key) in your tookan account.
-| teamName    | String| 
+| teamName    | String| This is the name of the team to be created.
 | batteryUsage| String| This is parameter decides the battery usage and accuracy level of agent's mobile.If '0' it is low,if '1' it is Medium, '2' It is High.
 | tags        | String| This is tags that you can mention for any team.
 

@@ -58,7 +58,7 @@
           "name": "jobPickupAddress",
           "type": "String",
           "info": "The address from which the pickup should be collected",
-          "required": false
+          "required": true
         },
         {
           "name": "jobPickupLatitude",
@@ -76,7 +76,7 @@
           "name": "jobPickupDatetime",
           "type": "String",
           "info": "This is time before which the pickup should be collected",
-          "required": false
+          "required": true
         },
         {
           "name": "trackingLink",
@@ -88,7 +88,7 @@
           "name": "timezone",
           "type": "String",
           "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330, for CST: +360 (CDT:+300)",
-          "required": false
+          "required": true
         },
         {
           "name": "pickupCustomFieldTemplate",
@@ -206,7 +206,7 @@
           "name": "customerAddress",
           "type": "String",
           "info": "This is the address of the customer to whom the product should be delivered",
-          "required": false
+          "required": true
         },
         {
           "name": "latitude",
@@ -224,7 +224,7 @@
           "name": "jobDeliveryDatetime",
           "type": "String",
           "info": "This is time before which the product should be delivered",
-          "required": false
+          "required": true
         },
         {
           "name": "trackingLink",
@@ -236,7 +236,7 @@
           "name": "timezone",
           "type": "String",
           "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330",
-          "required": false
+          "required": true
         },
         {
           "name": "metadata",
@@ -354,7 +354,7 @@
           "name": "jobPickupAddress",
           "type": "String",
           "info": "The address from which the pickup should be collected",
-          "required": false
+          "required": true
         },
         {
           "name": "jobPickupLatitude",
@@ -402,7 +402,7 @@
           "name": "customerAddress",
           "type": "String",
           "info": "This is the address of the customer to whom the product should be delivered",
-          "required": false
+          "required": true
         },
         {
           "name": "latitude",
@@ -420,7 +420,7 @@
           "name": "jobDeliveryDatetime",
           "type": "String",
           "info": "This is time before which the product should be delivered",
-          "required": false
+          "required": true
         },
         {
           "name": "customFieldTemplate",
@@ -438,7 +438,7 @@
           "name": "timezone",
           "type": "Integer",
           "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330",
-          "required": false
+          "required": true
         },
         {
           "name": "trackingLink",
@@ -550,7 +550,7 @@
           "name": "jobPickupAddress",
           "type": "String",
           "info": "The address from which the pickup should be collected.",
-          "required": false
+          "required": true
         },
         {
           "name": "jobPickupLatitude",
@@ -568,7 +568,7 @@
           "name": "jobPickupDatetime",
           "type": "String",
           "info": "This is time before which the pickup should be collected",
-          "required": false
+          "required": true
         },
         {
           "name": "pickupCustomFieldTemplate",
@@ -604,7 +604,7 @@
           "name": "customerAddress",
           "type": "String",
           "info": "This is the address of the customer to whom the product should be delivered",
-          "required": false
+          "required": true
         },
         {
           "name": "latitude",
@@ -622,7 +622,7 @@
           "name": "jobDeliveryDatetime",
           "type": "String",
           "info": "This is time before which the product should be delivered",
-          "required": false
+          "required": true
         },
         {
           "name": "customFieldTemplate",
@@ -640,7 +640,7 @@
           "name": "timezone",
           "type": "Number",
           "info": "Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330",
-          "required": false
+          "required": true
         },
         {
           "name": "trackingLink",
@@ -1112,7 +1112,7 @@
           "name": "jobType",
           "type": "Number",
           "info": "Filter via Job Type - 0 for Pick Up, 1 for Delivery, 2 for Appointment and 3 for FOS",
-          "required": false
+          "required": true
         },
         {
           "name": "startDate",
@@ -1181,7 +1181,7 @@
         {
           "name": "teamId",
           "type": "String",
-          "info": "",
+          "info": "Team ID",
           "required": false
         },
         {
@@ -1252,25 +1252,25 @@
           "name": "transportType",
           "type": "String",
           "info": "Send 1 for Car, 2 for Motor Cycle, 3 for Bicycle, 4 for Scooter, 5 for Foot, 6 for Truck",
-          "required": true
+          "required": false
         },
         {
           "name": "transportDesc",
           "type": "String",
           "info": "Transport description.",
-          "required": true
+          "required": false
         },
         {
           "name": "license",
           "type": "String",
           "info": "License",
-          "required": true
+          "required": false
         },
         {
           "name": "color",
           "type": "String",
           "info": "Color",
-          "required": true
+          "required": false
         },
         {
           "name": "timezone",
@@ -1288,7 +1288,7 @@
           "name": "password",
           "type": "String",
           "info": "You can set the password yourself, or leave it empty, in which case the system will auto-generate the password",
-          "required": true
+          "required": false
         },
         {
           "name": "username",
@@ -1300,10 +1300,10 @@
           "name": "firstName",
           "type": "String",
           "info": "This is the First name of the manager to be added.",
-          "required": false
+          "required": true
         },
         {
-          "name": "last_name",
+          "name": "lastName",
           "type": "String",
           "info": "This is the Last name of the manager to be added.",
           "required": false
@@ -1333,7 +1333,7 @@
         {
           "name": "teamName",
           "type": "String",
-          "info": "",
+          "info": "This is the name of the team to be created.",
           "required": true
         },
         {
@@ -1396,22 +1396,22 @@
           "name": "email",
           "type": "String",
           "info": "This is email of the manager to be added which is used while Login.",
-          "required": false
+          "required": true
         },
         {
           "name": "password",
           "type": "String",
           "info": "This is the password for the manager account to login.",
-          "required": false
+          "required": true
         },
         {
           "name": "firstName",
           "type": "String",
           "info": "This is the First name of the manager to be added.",
-          "required": false
+          "required": true
         },
         {
-          "name": "last_name",
+          "name": "lastName",
           "type": "String",
           "info": "This is the Last name of the manager to be added.",
           "required": false
@@ -1420,7 +1420,7 @@
           "name": "phone",
           "type": "String",
           "info": "This is the phone number of the manager to be added.",
-          "required": false
+          "required": true
         },
         {
           "name": "timezone",
@@ -1432,19 +1432,19 @@
           "name": "taskAccess",
           "type": "String",
           "info": "This is to give access for the unasigned tasks. Set this to '1' to give access and '0' not to give the access",
-          "required": false
+          "required": true
         },
         {
           "name": "addDriverAccess",
           "type": "String",
           "info": "This is to give access for the manager to create Agents. Set this to '1' to give access and '0' not to give the access",
-          "required": false
+          "required": true
         },
         {
           "name": "dispatcherTeams",
           "type": "String",
           "info": "Pass the team_ids in this parameter with comma seperated values to which the manager can access.",
-          "required": false
+          "required": true
         }
       ],
       "callbacks": [
