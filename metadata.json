@@ -20,7 +20,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -162,7 +162,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -304,7 +304,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -500,7 +500,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -702,7 +702,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -928,7 +928,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -962,7 +962,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -996,7 +996,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -1024,7 +1024,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -1058,7 +1058,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -1098,7 +1098,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -1174,7 +1174,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -1232,7 +1232,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -1326,7 +1326,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -1366,7 +1366,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         }
@@ -1388,7 +1388,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
@@ -1464,7 +1464,7 @@
       "args": [
         {
           "name": "apiKey",
-          "type": "String",
+          "type": "credentials",
           "info": "You can get a key from settings(Login>Menu>More>API Key) in your tookan account.",
           "required": true
         },
