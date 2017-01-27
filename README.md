@@ -416,8 +416,6 @@ This API is used to get the all the Customer details.
 | Field           | Type  | Description
 |-----------------|-------|----------
 | apiKey          | String| You can get a key from settings(Login>Menu>More>API Key) in your tookan account.
-| customerUsername| String| Filter the list based on the customer name
-| customerPhone   | String| Filter the list based on the customer phone number
 | isPagination    | String| You can set this as 1 to enable pagination
 | requestedPage   | String| Current(Which) page according to the page number of tasks in the filter
 

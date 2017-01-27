@@ -1469,18 +1469,6 @@
           "required": true
         },
         {
-          "name": "customerUsername",
-          "type": "String",
-          "info": "Filter the list based on the customer name",
-          "required": false
-        },
-        {
-          "name": "customerPhone",
-          "type": "String",
-          "info": "Filter the list based on the customer phone number",
-          "required": false
-        },
-        {
           "name": "isPagination",
           "type": "String",
           "info": "You can set this as 1 to enable pagination",
