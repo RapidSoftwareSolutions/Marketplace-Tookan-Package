@@ -16,7 +16,7 @@
   "blocks": [
     {
       "name": "createPickupTask",
-      "description": "There are different types of tasks can be created inside Tookan depending on the workflow you have selected in your account for e.g. - pick & delivery task, appointment task etc.",
+      "description": "This API is used to create a Pickup Task.",
       "args": [
         {
           "name": "apiKey",
@@ -211,13 +211,13 @@
         {
           "name": "latitude",
           "type": "String",
-          "info": "This is the latitiude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
+          "info": "This is the latitude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
           "required": false
         },
         {
           "name": "longitude",
           "type": "String",
-          "info": "This is the latitiude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
+          "info": "This is the longtitude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
           "required": false
         },
         {
@@ -958,7 +958,7 @@
     },
     {
       "name": "getTaskFromOrderID",
-      "description": "This api is used to get the details of the task.",
+      "description": "This endpoint is used to get the details of the task by order ID.",
       "args": [
         {
           "name": "apiKey",
@@ -1170,7 +1170,7 @@
     },
     {
       "name": "getAgents",
-      "description": "This API is used to get all the Agents/drivers/fleets information with respect to a location. The response array contains a status key for each of the fleet, which shows the current status of the fleet - 0 for available, 1 for offline and 2 for busy, taking into account the location, connectivity, ON-Duty/OFF-Duty status and if they are presently working a task.",
+      "description": "This endpoint is used to get all the Agents/drivers/fleets information with respect to a location.",
       "args": [
         {
           "name": "apiKey",
@@ -1361,7 +1361,7 @@
       ]
     },
     {
-      "name": "getTeam",
+      "name": "getTeams",
       "description": "This API is used to get the all the team details along with their agents' data",
       "args": [
         {

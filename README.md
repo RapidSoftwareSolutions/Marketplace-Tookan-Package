@@ -9,7 +9,7 @@ Simple, Powerful & Effective way to manage your delivery process.
 2. In **V2 API KEYS** section click on `Generate Key` button. 
 
 ## Tookan.createPickupTask
-There are different types of tasks can be created inside Tookan depending on the workflow you have selected in your account for e.g. - pick & delivery task, appointment task etc.
+This API is used to create a Pickup Task.
 
 | Field                    | Type   | Description
 |--------------------------|--------|----------
@@ -20,7 +20,7 @@ There are different types of tasks can be created inside Tookan depending on the
 | jobPickupName            | String | The name of the person from whom the pickup should be collected
 | jobPickupEmail           | String | The email of the person from whom the pickup should be collected
 | jobPickupAddress         | String | The address from which the pickup should be collected
-| jobPickupLatitude        | String | This is the latitiude of the pickup location
+| jobPickupLatitude        | String | This is the laftitiude of the pickup location
 | jobPickupLongitude       | String | This is the longitutude of the pickup location
 | jobPickupDatetime        | String | This is time before which the pickup should be collected
 | trackingLink             | String | If this value is `1` it will return a url in the response where the driver's movement can be tracked.if not no url will be returned
@@ -69,8 +69,8 @@ This API is used to create a Delivery Task.
 | customerUsername   | String | This is the name of the customer to whom the product should be delivered
 | customerPhone      | String | This is the contact number of the customer to whom the product should be delivered
 | customerAddress    | String | This is the address of the customer to whom the product should be delivered
-| latitude           | String | This is the latitiude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API
-| longitude          | String | This is the latitiude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API
+| latitude           | String | This is the latitude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API
+| longitude          | String | This is the longtitude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API
 | jobDeliveryDatetime| String | This is time before which the product should be delivered
 | trackingLink       | Boolean| If this value is `1` it will return a url in the respone where the driver's movement can be tracked.
 | timezone           | String | Timezone difference with UTC in minutes for e.g., For PST:+480 (PDT: +420),For MST +420 (MDT:+360) for EST: +300(EDT:+240), for AEST: -600 (AEDT: -660), for IST: -330
@@ -294,7 +294,7 @@ This api is used to get the details of the task.
 | userId    | Number| You can get it from account details page in Tookan dashboard.
 
 ## Tookan.getTaskFromOrderID
-This api is used to get the details of the task.
+This endpoint is used to get the details of the task by order ID.
 
 | Field     | Type  | Description
 |-----------|-------|----------
@@ -346,7 +346,7 @@ This API is used to get all the tasks as per the get all the tasks data as per t
 | customerPhone   | String| Filter the list based on the customer phone number.
 
 ## Tookan.getAgents
-This API is used to get all the Agents/drivers/fleets information with respect to a location. The response array contains a status key for each of the fleet, which shows the current status of the fleet - 0 for available, 1 for offline and 2 for busy, taking into account the location, connectivity, ON-Duty/OFF-Duty status and if they are presently working a task.
+This endpoint is used to get all the Agents/drivers/fleets information with respect to a location.
 
 | Field     | Type  | Description
 |-----------|-------|----------
@@ -387,7 +387,7 @@ This API is used to create a team
 | batteryUsage| String| This is parameter decides the battery usage and accuracy level of agent's mobile.If '0' it is low,if '1' it is Medium, '2' It is High.
 | tags        | String| This is tags that you can mention for any team.
 
-## Tookan.getTeam
+## Tookan.getTeams
 This API is used to get the all the team details along with their agents' data
 
 | Field     | Type  | Description

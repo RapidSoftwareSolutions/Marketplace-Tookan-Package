@@ -284,7 +284,7 @@
             "String|tags": "tags"
         }
     },
-    "getTeam": {
+    "getTeams": {
         "url": "https://api.tookanapp.com/v2/view_teams",
         "method": "POST",
         "args": {
