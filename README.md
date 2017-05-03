@@ -38,7 +38,7 @@ This API is used to create a Pickup Task.
 | tags                     | String | This is a string containing comma separated tags as filters for agents in auto assignment.
 
 #### `pickupMetadata` field example: 
-````json
+```json
 "pickupMetadata": [
   {
 	"label": "Price",
@@ -51,7 +51,7 @@ This API is used to create a Pickup Task.
 ]
 ```
 #### `refImages` field example: 
-````json
+```json
 "pRefImages": [
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png",
   "http://tookanapp.com/wp-content/uploads/2015/11/logo_dark.png"
@@ -86,7 +86,7 @@ This API is used to create a Delivery Task.
 | tags               | String | This is a string containing comma separated tags as filters for agents in auto assignment
 
 #### `pickupMetadata` field example: 
-````json
+```json
 "metadata": [
   {
 	"label": "Price",
@@ -144,7 +144,7 @@ This api is used to create Pickup and delivery task.
 | tags               | String | This is a string containing comma separated tags as filters for agents in auto assignment.
 
 #### `pickupMetadata`, `metadata` fields example: 
-````json
+```json
 [
   {
 	"label": "Price",
@@ -203,7 +203,7 @@ This api is used to create an appointment task.
 | tags                     | String| This is a string containing comma separated tags as filters for agents in auto assignment.
 
 #### `metadata` field example: 
-````json
+```json
 [
   {
 	"label": "Price",
@@ -265,7 +265,7 @@ This api used to edit a task that has already been added.
 | customFieldTemplate      | String | This is the custom fields template name that is pre-defined in your workflow page in the admin account
 
 #### `pickupMetadata`, `metadata` fields example: 
-````json
+```json
 [
   {
 	"label": "Price",
