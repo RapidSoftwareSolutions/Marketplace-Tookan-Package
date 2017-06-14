@@ -86,11 +86,11 @@ for (let func in control) {
       return parsedString;
     }
     if (typeof req.body.args.tags != 'undefined') {
-      tags = util.isArray(tags) ? tags.join() : tags;
+    let  tags = util.isArray(req.body.args.tags) ? req.body.args.tags.join() : req.body.args.tags;
       req.body.args.tags = IsJsonString(tags) ? IsJsonString(tags).join() : tags;
     }
     if (typeof req.body.args.dispatcherTeams != 'undefined') {
-      dispatcherTeams = util.isArray(dispatcherTeams) ? dispatcherTeams.join() : dispatcherTeams;
+    let  dispatcherTeams = util.isArray(dispatcherTeams) ? req.body.args.dispatcherTeams.join() : req.body.args.dispatcherTeams;
       req.body.args.dispatcherTeams = IsJsonString(dispatcherTeams) ? IsJsonString(dispatcherTeams).join() : dispatcherTeams;
     }
 
