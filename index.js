@@ -70,11 +70,11 @@ for (let func in control) {
 
     if (typeof req.body.args.startDate != 'undefined') {
       let rawStartTime = datetime.create(req.body.args.startDate);
-      startDate = rawStartTime.format('Y-m-d');
+      req.body.args.startDate = rawStartTime.format('Y-m-d');
     }
     if (typeof req.body.args.endDate != 'undefined') {
       let rawEndTime = datetime.create(req.body.args.endDate);
-      endDate = rawEndTime.format('Y-m-d');
+      req.body.args.endDate = rawEndTime.format('Y-m-d');
     }
 
     function IsJsonString(str) {
