@@ -68,11 +68,14 @@ for (let func in control) {
       req.body.args.longitude = coordinates[1];
     }
 
+  if  (typeof req.body.args.startDate != 'undefined') {
     let rawStartTime = datetime.create(startDate);
     startDate = rawStartTime.format('Y-m-d');
-
+  }
+  if  (typeof req.body.args.endDate != 'undefined') {
     let rawEndTime = datetime.create(endDate);
     endDate = rawEndTime.format('Y-m-d');
+  }
 
     function IsJsonString(str) {
       try {
@@ -82,12 +85,14 @@ for (let func in control) {
       }
       return parsedString;
     }
-
+  if  (typeof req.body.args.tags != 'undefined') {
     tags = util.isArray(tags) ? tags.join() : tags;
     tags = IsJsonString(tags) ? IsJsonString(tags).join() : tags;
-
+  }
+if  (typeof req.body.args.dispatcherTeams != 'undefined') {
     dispatcherTeams = util.isArray(dispatcherTeams) ? dispatcherTeams.join() : dispatcherTeams;
     dispatcherTeams = IsJsonString(dispatcherTeams) ? IsJsonString(dispatcherTeams).join() : dispatcherTeams;
+  }
 
 
 
