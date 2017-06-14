@@ -87,7 +87,7 @@ for (let func in control) {
     }
     if (typeof req.body.args.tags != 'undefined') {
       tags = util.isArray(tags) ? tags.join() : tags;
-      tags = IsJsonString(tags) ? IsJsonString(tags).join() : tags;
+      req.body.args.tags = IsJsonString(tags) ? IsJsonString(tags).join() : tags;
     }
     if (typeof req.body.args.dispatcherTeams != 'undefined') {
       dispatcherTeams = util.isArray(dispatcherTeams) ? dispatcherTeams.join() : dispatcherTeams;
