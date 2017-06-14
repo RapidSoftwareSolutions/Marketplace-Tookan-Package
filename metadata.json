@@ -61,20 +61,14 @@
           "required": true
         },
         {
-          "name": "jobPickupLatitude",
-          "type": "String",
-          "info": "This is the latitiude of the pickup location",
-          "required": false
-        },
-        {
-          "name": "jobPickupLongitude",
-          "type": "String",
-          "info": "This is the longitutude of the pickup location",
+          "name": "jobPickupCoordinate",
+          "type": "Map",
+          "info": "This is the latitiude and longitude coma separated of the pickup location",
           "required": false
         },
         {
           "name": "jobPickupDatetime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "This is time before which the pickup should be collected",
           "required": true
         },
@@ -98,7 +92,12 @@
         },
         {
           "name": "pickupMetadata",
-          "type": "JSON",
+          "type": "List",
+          "structure":{
+            "name": "pickupMetadata",
+            "type":"JSON",
+            "info": "Single pickupMetadata"
+          },
           "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
           "required": false
         },
@@ -122,7 +121,12 @@
         },
         {
           "name": "pRefImages",
-          "type": "Array",
+          "type": "List",
+          "structure":{
+            "name": "pRefImage",
+            "type":"String",
+            "info": "Single pRefImage"
+          },
           "info": "This is an array of strings containing links of images.",
           "required": false
         },
@@ -140,8 +144,13 @@
         },
         {
           "name": "tags",
-          "type": "String",
-          "info": "This is a string containing comma separated tags as filters for agents in auto assignment.",
+          "type": "List",
+          "structure":{
+            "name": "tag",
+            "type":"String",
+            "info": "Single tag"
+          },
+          "info": "This is an array of tags as filters for agents in auto assignment.",
           "required": false
         }
       ],
@@ -209,20 +218,15 @@
           "required": true
         },
         {
-          "name": "latitude",
-          "type": "String",
-          "info": "This is the latitude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
+          "name": "coordinate",
+          "type": "Map",
+          "info": "This is the latitude and longitude coma separated of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
           "required": false
         },
-        {
-          "name": "longitude",
-          "type": "String",
-          "info": "This is the longtitude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
-          "required": false
-        },
+
         {
           "name": "jobDeliveryDatetime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "This is time before which the product should be delivered",
           "required": true
         },
@@ -240,7 +244,12 @@
         },
         {
           "name": "metadata",
-          "type": "JSON",
+          "type": "List",
+          "structure":{
+            "name": "metadata",
+            "type":"JSON",
+            "info": "Single metadata"
+          },
           "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
           "required": false
         },
@@ -264,7 +273,12 @@
         },
         {
           "name": "refImages",
-          "type": "Array",
+          "type": "List",
+          "structure":{
+            "name": "refImage",
+            "type":"String",
+            "info": "Single refImage"
+          },
           "info": "This is an array of strings containing links of images",
           "required": false
         },
@@ -282,8 +296,13 @@
         },
         {
           "name": "tags",
-          "type": "String",
-          "info": "This is a string containing comma separated tags as filters for agents in auto assignment",
+          "type": "List",
+          "structure":{
+            "name": "tag",
+            "type":"String",
+            "info": "Single tag"
+          },
+          "info": "This is an array of tags as filters for agents in auto assignment",
           "required": false
         }
       ],
@@ -357,26 +376,25 @@
           "required": true
         },
         {
-          "name": "jobPickupLatitude",
+          "name": "jobPickupAddress",
           "type": "String",
-          "info": "This is the latitiude of the pickup location",
-          "required": false
-        },
-        {
-          "name": "jobPickupLongitude",
-          "type": "String",
-          "info": "This is the longitutude of the pickup location",
-          "required": false
+          "info": "The address from which the pickup should be collected",
+          "required": true
         },
         {
           "name": "jobPickupDatetime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "This is time before which the pickup should be collected",
           "required": false
         },
         {
           "name": "pickupMetadata",
-          "type": "JSON",
+          "type": "List",
+          "structure":{
+            "name": "pickupMetadata",
+            "type":"JSON",
+            "info": "Single pickupMetadata"
+          },
           "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
           "required": false
         },
@@ -405,20 +423,15 @@
           "required": true
         },
         {
-          "name": "latitude",
-          "type": "String",
-          "info": "This is the latitiude of the delivery location",
+          "name": "coordinate",
+          "type": "Map",
+          "info": "This is the latitude and longitude coma separated of the delivery location",
           "required": false
         },
-        {
-          "name": "longitude",
-          "type": "String",
-          "info": "This is the longitude of the delivery location",
-          "required": false
-        },
+
         {
           "name": "jobDeliveryDatetime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "This is time before which the product should be delivered",
           "required": true
         },
@@ -430,7 +443,12 @@
         },
         {
           "name": "metadata",
-          "type": "JSON",
+          "type": "List",
+          "structure":{
+            "name": "metadata",
+            "type":"JSON",
+            "info": "Single metadata"
+          },
           "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
           "required": false
         },
@@ -454,13 +472,23 @@
         },
         {
           "name": "pRefImages",
-          "type": "Array",
+          "type": "List",
+          "structure":{
+            "name": "pRefImage",
+            "type":"String",
+            "info": "Single pRefImage"
+          },
           "info": "(Pickup) This is an array of strings containing links of images.",
           "required": false
         },
         {
           "name": "refImages",
-          "type": "Array",
+          "type": "List",
+          "structure":{
+            "name": "refImage",
+            "type":"String",
+            "info": "Single refImage"
+          },
           "info": "(Delivery) This is an array of strings containing links of images.",
           "required": false
         },
@@ -478,8 +506,13 @@
         },
         {
           "name": "tags",
-          "type": "String",
-          "info": "This is a string containing comma separated tags as filters for agents in auto assignment.",
+          "type": "List",
+          "structure":{
+            "name": "tag",
+            "type":"String",
+            "info": "Single tag"
+          },
+          "info": "This is an array of tags as filters for agents in auto assignment.",
           "required": false
         }
       ],
@@ -553,20 +586,15 @@
           "required": true
         },
         {
-          "name": "jobPickupLatitude",
-          "type": "String",
-          "info": "This is the latitiude of the pickup location",
+          "name": "jobPickupCoordinate",
+          "type": "Map",
+          "info": "This is the latitiude and longitude coma separated of the pickup location",
           "required": false
         },
-        {
-          "name": "jobPickupLongitude",
-          "type": "String",
-          "info": "This is the longitutude of the pickup location",
-          "required": false
-        },
+
         {
           "name": "jobPickupDatetime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "This is time before which the pickup should be collected",
           "required": true
         },
@@ -578,7 +606,12 @@
         },
         {
           "name": "pickupMetadata",
-          "type": "String",
+          "type": "List",
+          "structure":{
+            "name": "pickupMetadata",
+            "type":"JSON",
+            "info": "Single pickupMetadata"
+          },
           "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
           "required": false
         },
@@ -607,20 +640,15 @@
           "required": true
         },
         {
-          "name": "latitude",
-          "type": "String",
-          "info": "This is the latitiude of the delivery location",
+          "name": "coordinate",
+          "type": "Map",
+          "info": "This is the latitiude and longitude coma separated of the delivery location",
           "required": false
         },
-        {
-          "name": "longitude",
-          "type": "String",
-          "info": "This is the longitude of the delivery location",
-          "required": false
-        },
+
         {
           "name": "jobDeliveryDatetime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "This is time before which the product should be delivered",
           "required": true
         },
@@ -632,7 +660,12 @@
         },
         {
           "name": "metadata",
-          "type": "JSON",
+          "type": "List",
+          "structure":{
+            "name": "metadata",
+            "type":"JSON",
+            "info": "Single metadata"
+          },
           "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
           "required": false
         },
@@ -656,13 +689,23 @@
         },
         {
           "name": "pRefImages",
-          "type": "Array",
+          "type": "List",
+          "structure":{
+            "name": "pRefImage",
+            "type":"String",
+            "info": "Single pRefImage"
+          },
           "info": "(Pickup) This is an array of strings containing links of images.",
           "required": false
         },
         {
           "name": "refImages",
-          "type": "Array",
+          "type": "List",
+          "structure":{
+            "name": "refImage",
+            "type":"String",
+            "info": "Single refImage"
+          },
           "info": "(Delivery) This is an array of strings containing links of images.",
           "required": false
         },
@@ -680,8 +723,13 @@
         },
         {
           "name": "tags",
-          "type": "String",
-          "info": "This is a string containing comma separated tags as filters for agents in auto assignment.",
+          "type": "List",
+          "structure":{
+            "name": "tag",
+            "type":"String",
+            "info": "Single tag"
+          },
+          "info": "This is an array of tags as filters for agents in auto assignment.",
           "required": false
         }
       ],
@@ -767,20 +815,15 @@
           "required": false
         },
         {
-          "name": "jobPickupLatitude",
-          "type": "String",
-          "info": "This is the latitiude of the pickup location",
+          "name": "jobPickupCoordinate",
+          "type": "Map",
+          "info": "This is the latitude and longitude coma separated of the pickup location",
           "required": false
         },
-        {
-          "name": "jobPickupLongitude",
-          "type": "String",
-          "info": "This is the longitutude of the pickup location",
-          "required": false
-        },
+
         {
           "name": "jobPickupDatetime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "This is time before which the pickup should be collected",
           "required": false
         },
@@ -804,7 +847,12 @@
         },
         {
           "name": "pickupMetadata",
-          "type": "JSON",
+          "type": "List",
+          "structure":{
+            "name": "pickupMetadata",
+            "type":"JSON",
+            "info": "Single pickupMetadata"
+          },
           "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
           "required": false
         },
@@ -828,7 +876,12 @@
         },
         {
           "name": "pRefImages",
-          "type": "Array",
+          "type": "List",
+          "structure":{
+            "name": "pRefImage",
+            "type":"String",
+            "info": "Single pRefImage"
+          },
           "info": "This is an array of strings containing links of images.",
           "required": false
         },
@@ -846,8 +899,13 @@
         },
         {
           "name": "tags",
-          "type": "String",
-          "info": "This is a string containing comma separated tags as filters for agents in auto assignment.",
+          "type": "List",
+          "structure":{
+            "name": "tag",
+            "type":"String",
+            "info": "Single tag"
+          },
+          "info": "This is an array of tags as filters for agents in auto assignment.",
           "required": false
         },
         {
@@ -875,32 +933,36 @@
           "required": false
         },
         {
-          "name": "latitude",
-          "type": "String",
-          "info": "This is the latitiude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
-          "required": false
-        },
-        {
-          "name": "longitude",
-          "type": "String",
-          "info": "This is the latitiude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
+          "name": "coordinate",
+          "type": "Map",
+          "info": "This is the latitude and longitude of the pickup location if you have it. Otherwise leave it blank. We will get it through geocoding API",
           "required": false
         },
         {
           "name": "jobDeliveryDatetime",
-          "type": "String",
+          "type": "DatePicker",
           "info": "This is time before which the product should be delivered",
           "required": false
         },
         {
           "name": "metadata",
-          "type": "JSON",
+          "type": "List",
+          "structure":{
+            "name": "metadata",
+            "type":"JSON",
+            "info": "Single metadata"
+          },
           "info": "This is array of object containing label and data where label defines the custom field name and data will be his value.(Provided label should be in specified template.)",
           "required": false
         },
         {
           "name": "refImages",
-          "type": "Array",
+          "type": "List",
+          "structure":{
+            "name": "refImage",
+            "type":"String",
+            "info": "Single refImage"
+          },
           "info": "This is an array of strings containing links of images",
           "required": false
         },
@@ -1110,19 +1172,20 @@
         },
         {
           "name": "jobType",
-          "type": "Number",
+          "type": "Select",
+          "options":["0", "1", "2", "3"],
           "info": "Filter via Job Type - 0 for Pick Up, 1 for Delivery, 2 for Appointment and 3 for FOS",
           "required": true
         },
         {
           "name": "startDate",
-          "type": "Number",
+          "type": "DatePicker",
           "info": "Start Date for the date range",
           "required": false
         },
         {
           "name": "endDate",
-          "type": "Number",
+          "type": "DatePicker",
           "info": "End Date for the date range",
           "required": false
         },
@@ -1186,7 +1249,12 @@
         },
         {
           "name": "tags",
-          "type": "String",
+          "type": "List",
+          "structure":{
+            "name": "tag",
+            "type":"String",
+            "info": "Single tag"
+          },
           "info": "You can pass the tags, comma separated, if you want to filter the list of agents via tags.",
           "required": false
         },
@@ -1197,17 +1265,12 @@
           "required": false
         },
         {
-          "name": "latitude",
-          "type": "String",
+          "name": "coordinate",
+          "type": "Map",
           "info": "You can pass lat long values to get the distance between agent location and this location pointed by the lat long values.",
           "required": false
         },
-        {
-          "name": "longitude",
-          "type": "String",
-          "info": "Both lat long values are required if you want distance measurement and/or enable geo-fence filtering of the agents.",
-          "required": false
-        },
+
         {
           "name": "geofence",
           "type": "String",
@@ -1250,7 +1313,8 @@
         },
         {
           "name": "transportType",
-          "type": "String",
+          "type": "Select",
+          "options":["1", "2", "3", "4", "5", "6"],
           "info": "Send 1 for Car, 2 for Motor Cycle, 3 for Bicycle, 4 for Scooter, 5 for Foot, 6 for Truck",
           "required": false
         },
@@ -1344,7 +1408,12 @@
         },
         {
           "name": "tags",
-          "type": "String",
+          "type": "List",
+          "structure":{
+            "name": "tag",
+            "type":"String",
+            "info": "Single tag"
+          },
           "info": "This is tags that you can mention for any team.",
           "required": false
         }
@@ -1442,7 +1511,12 @@
         },
         {
           "name": "dispatcherTeams",
-          "type": "String",
+          "type": "List",
+          "structure":{
+            "name": "dispatcherTeam",
+            "type":"String",
+            "info": "Single dispatcherTeam"
+          },
           "info": "Pass the team_ids in this parameter with comma seperated values to which the manager can access.",
           "required": true
         }
